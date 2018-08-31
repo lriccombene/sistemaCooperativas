@@ -50,7 +50,7 @@ class E_capital_integracion(base):
 
 
     def get_cap_integra(self,id_asoc):
-        list_cap_integra = self.session.query(E_capital_integracion).filter_by(id_asoc=id_asoc).all()
+        list_cap_integra = self.session.query(E_capital_integracion).filter_by(id_asoc=id_asoc).order_by(E_capital_integracion.nro_cuota).all()
         self.session.close()
         return list_cap_integra
 
@@ -60,3 +60,22 @@ class E_capital_integracion(base):
         obj=self.session.query(E_capital_integracion).filter(E_capital_integracion.id==id_cap_integra).first()
         self.session.delete(obj)
         self.session.commit()
+
+    def pagar(self, nro_cuota,aporte_tipo,id_asoc):
+        #pyqtRemoveInputHook()
+        #import pdb; pdb.set_trace()
+        new_record = self.session.query(E_capital_integracion).filter_by(nro_cuota=nro_cuota,
+                                                                         id_asoc=id_asoc).first()
+
+        new_record.tipo_aporte = aporte_tipo
+        new_record.estado = "Pagada"
+
+        try:
+            self.session.add(new_record)
+            self.session.commit()
+            self.session.close()
+            return True
+        except:
+            new_record.session.rollback()
+            new_record.session.close()
+            return False
