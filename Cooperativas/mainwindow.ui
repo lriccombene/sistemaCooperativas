@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>650</width>
+    <height>439</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>780</width>
+    <height>780</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>SISTEMA DE GESTIÓN COOPERATIVO</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 10pt &quot;Courier 10 Pitch&quot;;
+selection-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+selection-background-color: rgb(213, 213, 212);
+background-color: rgb(131, 45, 108);</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="3">
+       <widget class="QPushButton" name="boton_modulo_coope">
+        <property name="minimumSize">
+         <size>
+          <width>121</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>121</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(255, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>COOPERATIVA</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>iconos/limited_userv2.png</normaloff>iconos/limited_userv2.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3">
+       <widget class="QPushButton" name="boton_modulo_cargos">
+        <property name="minimumSize">
+         <size>
+          <width>121</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>121</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(0, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>CARGOS</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>iconos/calidad-de-la-pagina.png</normaloff>iconos/calidad-de-la-pagina.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QPushButton" name="boton_modulo_reportes">
+        <property name="minimumSize">
+         <size>
+          <width>121</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>121</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(255, 85, 255);</string>
+        </property>
+        <property name="text">
+         <string>REPORTES</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>iconos/herramientas-de-papel-y-lapiz.png</normaloff>iconos/herramientas-de-papel-y-lapiz.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" rowspan="3" colspan="3">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>iconos/logotipo_dircoop.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QPushButton" name="boton_modulo_notas">
+        <property name="minimumSize">
+         <size>
+          <width>121</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>121</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(85, 0, 127);</string>
+        </property>
+        <property name="text">
+         <string>NOTAS</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>iconos/casilla-y-boligrafo.png</normaloff>iconos/casilla-y-boligrafo.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="boton_modulo_contable">
+        <property name="minimumSize">
+         <size>
+          <width>121</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>121</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(255, 180, 5);</string>
+        </property>
+        <property name="text">
+         <string>CONTABLE</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>iconos/maquina-de-facturacion-electronica-con-escaner.png</normaloff>iconos/maquina-de-facturacion-electronica-con-escaner.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="boton_modulo_capital">
+        <property name="minimumSize">
+         <size>
+          <width>121</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>121</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 0);</string>
+        </property>
+        <property name="text">
+         <string>CAPITAL</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>iconos/calculadora.png</normaloff>iconos/calculadora.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QPushButton" name="boton_modulo_asociados">
+        <property name="minimumSize">
+         <size>
+          <width>121</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>121</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(85, 170, 0);
+color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>ASOCIADOS</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>iconos/silueta-masculina-de-usuario.png</normaloff>iconos/silueta-masculina-de-usuario.png</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>650</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuASOCIADO">
+    <property name="title">
+     <string>ASOCIADO</string>
+    </property>
+    <addaction name="actionALTA_ASOCIADO"/>
+    <addaction name="actionACTUALIZACI_N_ASOCIADO"/>
+   </widget>
+   <widget class="QMenu" name="menuCAPITAL_SOCIAL">
+    <property name="title">
+     <string>CAP. SOCIAL</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuCONTABLES">
+    <property name="title">
+     <string>CONTABLES</string>
+    </property>
+    <addaction name="actionMOVIMIENTOS"/>
+   </widget>
+   <widget class="QMenu" name="menuDATOS_COOPERATIVA">
+    <property name="title">
+     <string>DATOS COOP.</string>
+    </property>
+    <addaction name="actionALTA_COOPERATIVA"/>
+   </widget>
+   <widget class="QMenu" name="menuREPORTES">
+    <property name="title">
+     <string>REPORTES</string>
+    </property>
+    <addaction name="actionLISTA_DE_ASOCIADOS"/>
+    <addaction name="separator"/>
+    <addaction name="actionMOVIMIENTOS_MENSUALES"/>
+   </widget>
+   <widget class="QMenu" name="menuNOTAS">
+    <property name="title">
+     <string>NOTAS</string>
+    </property>
+    <addaction name="actionACTAS"/>
+   </widget>
+   <widget class="QMenu" name="menuCONSEJO_DE_ADMINISTRAC_N">
+    <property name="title">
+     <string>NOMINA DE CARGOS</string>
+    </property>
+    <addaction name="actionC_A"/>
+   </widget>
+   <addaction name="menuASOCIADO"/>
+   <addaction name="menuCAPITAL_SOCIAL"/>
+   <addaction name="menuCONTABLES"/>
+   <addaction name="menuDATOS_COOPERATIVA"/>
+   <addaction name="menuREPORTES"/>
+   <addaction name="menuNOTAS"/>
+   <addaction name="menuCONSEJO_DE_ADMINISTRAC_N"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionALTA_ASOCIADO">
+   <property name="icon">
+    <iconset>
+     <normaloff>iconos/silueta-masculina-de-usuario.png</normaloff>iconos/silueta-masculina-de-usuario.png</iconset>
+   </property>
+   <property name="text">
+    <string>ALTA ASOCIADO</string>
+   </property>
+  </action>
+  <action name="actionACTUALIZACI_N_ASOCIADO">
+   <property name="icon">
+    <iconset>
+     <normaloff>iconos/boton-actualizar.png</normaloff>iconos/boton-actualizar.png</iconset>
+   </property>
+   <property name="text">
+    <string>ACTUALIZACIÓN ASOCIADO</string>
+   </property>
+  </action>
+  <action name="actionBAJA_ASOCIADO">
+   <property name="icon">
+    <iconset>
+     <normaloff>iconos/foto-principal-del-usuario.png</normaloff>iconos/foto-principal-del-usuario.png</iconset>
+   </property>
+   <property name="text">
+    <string>BAJA ASOCIADO</string>
+   </property>
+  </action>
+  <action name="actionBUSCAR_ASOCIADO">
+   <property name="icon">
+    <iconset>
+     <normaloff>iconos/prismaticos.png</normaloff>iconos/prismaticos.png</iconset>
+   </property>
+   <property name="text">
+    <string>BUSCAR ASOCIADO</string>
+   </property>
+  </action>
+  <action name="actionLISTA_DE_ASOCIADOS">
+   <property name="icon">
+    <iconset>
+     <normaloff>iconos/herramientas-de-papel-y-lapiz.png</normaloff>iconos/herramientas-de-papel-y-lapiz.png</iconset>
+   </property>
+   <property name="text">
+    <string>LISTA DE ASOCIADOS</string>
+   </property>
+  </action>
+  <action name="actionALTA_COOPERATIVA">
+   <property name="icon">
+    <iconset>
+     <normaloff>iconos/limited_userv2.png</normaloff>iconos/limited_userv2.png</iconset>
+   </property>
+   <property name="text">
+    <string>ALTA COOPERATIVA</string>
+   </property>
+  </action>
+  <action name="actionACTUALIZACI_N_DATOS">
+   <property name="icon">
+    <iconset>
+     <normaloff>iconos/boton-actualizar.png</normaloff>iconos/boton-actualizar.png</iconset>
+   </property>
+   <property name="text">
+    <string>ACTUALIZACIÓN DATOS</string>
+   </property>
+  </action>
+  <action name="actionMOVIMIENTOS">
+   <property name="icon">
+    <iconset>
+     <normaloff>iconos/maquina-de-facturacion-electronica-con-escaner.png</normaloff>iconos/maquina-de-facturacion-electronica-con-escaner.png</iconset>
+   </property>
+   <property name="text">
+    <string>COMPRAS Y VENTAS</string>
+   </property>
+  </action>
+  <action name="actionMOVIMIENTOS_MENSUALES">
+   <property name="icon">
+    <iconset>
+     <normaloff>iconos/documento-financiero.png</normaloff>iconos/documento-financiero.png</iconset>
+   </property>
+   <property name="text">
+    <string>MOVIMIENTOS MENSUALES</string>
+   </property>
+  </action>
+  <action name="actionMOVIMIENTO_ANUAL">
+   <property name="icon">
+    <iconset>
+     <normaloff>iconos/documento-financiero.png</normaloff>iconos/documento-financiero.png</iconset>
+   </property>
+   <property name="text">
+    <string>MOVIMIENTO ANUAL</string>
+   </property>
+  </action>
+  <action name="actionACTAS">
+   <property name="icon">
+    <iconset>
+     <normaloff>iconos/calidad-de-la-pagina.png</normaloff>iconos/calidad-de-la-pagina.png</iconset>
+   </property>
+   <property name="text">
+    <string>ACTAS E INFORMES</string>
+   </property>
+  </action>
+  <action name="actionC_A">
+   <property name="icon">
+    <iconset>
+     <normaloff>iconos/calidad-de-la-pagina.png</normaloff>iconos/calidad-de-la-pagina.png</iconset>
+   </property>
+   <property name="text">
+    <string>ABM CARGOS</string>
+   </property>
+  </action>
+  <action name="actionSINDICATURA">
+   <property name="icon">
+    <iconset>
+     <normaloff>iconos/calidad-de-la-pagina.png</normaloff>iconos/calidad-de-la-pagina.png</iconset>
+   </property>
+   <property name="text">
+    <string>SINDICATURA</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

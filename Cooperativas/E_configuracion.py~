@@ -1,0 +1,26 @@
+class configuracion(object):
+    def config(self):
+        cadena = 'postgresql://postgres:slam2016@localhost:5432/dcm'
+        return cadena
+
+    #lugar donde se descargan archivos local
+    def ruta(self):
+        cadena="/home/user/Documentos/DCM-Cooperativas/cooperativas20170709/Descargas"
+
+        return cadena
+    #lugar de donde se obtienen los archivos del servidor
+    def ruta_server(self):
+        cadena ="/home/user/Documentos/DCM-Cooperativas/cooperativas20170709/Descargas"
+        return cadena
+
+    def host_server(self):
+        cadena ='10.0.0.112'
+        return cadena
+
+    def usu_server(self):
+        cadena ='user'
+        return cadena
+
+    def pass_server(self):
+        cadena ='slam2016'
+        return cadena
