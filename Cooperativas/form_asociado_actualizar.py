@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'form_asociado_actualizar.ui'
 #
-# Created by: PyQt5 UI code generator 5.5.1
+# Created by: PyQt5 UI code generator 5.9.2
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -684,6 +684,11 @@ class Ui_form_asociado_actualizar(object):
         self.horizontalLayout_19.addWidget(self.lne_importe_cta)
         spacerItem20 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_19.addItem(spacerItem20)
+        self.btn_pagar = QtWidgets.QPushButton(self.tab_3)
+        self.btn_pagar.setStyleSheet("background-color: rgb(140, 189, 58);\n"
+"color: rgb(0, 0, 0);")
+        self.btn_pagar.setObjectName("btn_pagar")
+        self.horizontalLayout_19.addWidget(self.btn_pagar)
         self.gridLayout_3.addLayout(self.horizontalLayout_19, 6, 0, 1, 1)
         self.horizontalLayout_20 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_20.setObjectName("horizontalLayout_20")
@@ -1081,12 +1086,30 @@ class Ui_form_asociado_actualizar(object):
         self.gridLayout_5.addLayout(self.horizontalLayout_36, 3, 0, 1, 1)
         self.tabWidget.addTab(self.tab_8, "")
         self.gridLayout_7.addWidget(self.tabWidget, 1, 0, 1, 1)
-        self.frame.raise_()
-        self.line_2.raise_()
-        self.tabWidget.raise_()
 
         self.retranslateUi(form_asociado_actualizar)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(1)
+        self.boton_limpiar.clicked.connect(self.lne_correo.clear)
+        self.boton_limpiar.clicked.connect(self.lne_tel_otro.clear)
+        self.boton_limpiar.clicked.connect(self.lne_tel_principal.clear)
+        self.boton_limpiar.clicked.connect(self.lne_provincia.clear)
+        self.boton_limpiar.clicked.connect(self.lne_localidad.clear)
+        self.boton_limpiar.clicked.connect(self.lne_depto.clear)
+        self.boton_limpiar.clicked.connect(self.lne_bloque.clear)
+        self.boton_limpiar.clicked.connect(self.lne_mzna.clear)
+        self.boton_limpiar.clicked.connect(self.lne_c_postal.clear)
+        self.boton_limpiar.clicked.connect(self.lne_domicilio.clear)
+        self.boton_limpiar.clicked.connect(self.lne_nro_dom.clear)
+        self.boton_limpiar.clicked.connect(self.lne_piso_domicilio.clear)
+        self.boton_limpiar.clicked.connect(self.lne_nro_doc.clear)
+        self.boton_limpiar.clicked.connect(self.lne_nro_cuil.clear)
+        self.boton_limpiar.clicked.connect(self.lne_apellido_2.clear)
+        self.boton_limpiar.clicked.connect(self.lne_nombre_2.clear)
+        self.boton_limpiar.clicked.connect(self.lne_nro_acta_ca.clear)
+        self.boton_limpiar.clicked.connect(self.lne_nro_foja.clear)
+        self.boton_limpiar.clicked.connect(self.lne_nro_asoc.clear)
+        self.boton_limpiar_5.clicked.connect(self.lne_nro_acta_capitaliza.clear)
+        self.boton_limpiar_5.clicked.connect(self.lne_importe_capitaliza.clear)
         QtCore.QMetaObject.connectSlotsByName(form_asociado_actualizar)
 
     def retranslateUi(self, form_asociado_actualizar):
@@ -1149,6 +1172,7 @@ class Ui_form_asociado_actualizar(object):
         self.label_41.setText(_translate("form_asociado_actualizar", "Fecha :"))
         self.dte_fec_cuota.setDisplayFormat(_translate("form_asociado_actualizar", "dd/MM/yyyy"))
         self.label_42.setText(_translate("form_asociado_actualizar", "Pesos:"))
+        self.btn_pagar.setText(_translate("form_asociado_actualizar", "Pagar"))
         self.label_43.setText(_translate("form_asociado_actualizar", "Tipo de aporte:"))
         self.cbx_aporte_tipo.setItemText(0, _translate("form_asociado_actualizar", "efectivo"))
         self.cbx_aporte_tipo.setItemText(1, _translate("form_asociado_actualizar", "especie"))
