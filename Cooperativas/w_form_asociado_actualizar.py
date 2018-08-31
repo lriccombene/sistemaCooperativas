@@ -19,6 +19,7 @@ class asociado_actualizar(QDialog):
     obj_form= Ui_form_asociado_actualizar()
     id_party=0
     id_asoc=0
+    id_capitalizacion =""
 
     def __init__(self):
         QDialog.__init__(self)
@@ -37,6 +38,7 @@ class asociado_actualizar(QDialog):
 
         self.obj_form.boton_agregar_capitaliza.clicked.connect(self.agregar_capitaliza)
         self.obj_form.boton_actualizar_capitali.clicked.connect(self.actualizar_capitali)
+        self.obj_form.btn_pagar.clicked.connect(self.pagar)
         self.obj_form.tw_historia_capitaliza.cellClicked.connect(self.select_item_capitaliza)
 
 
@@ -59,15 +61,15 @@ class asociado_actualizar(QDialog):
 
             twi3 = self.obj_form.tw_historia_capitaliza.item(clickedIndex,4)
             try:
-                id_capitalizacion = twi3.text()
+                self.id_capitalizacion = twi3.text()
             except:
-                id_capitalizacion =None
+                self.id_capitalizacion =None
 
             #pyqtRemoveInputHook()
             #import pdb; pdb.set_trace()
-            if id_capitalizacion != None:
+            if self.id_capitalizacion != None:
                 obj_capitalizacion= E_capitalizacion()
-                obj_capitalizacion.borrar(id_capitalizacion)
+                obj_capitalizacion.borrar(self.id_capitalizacion)
 
             self.obj_form.tw_historia_capitaliza.removeRow(clickedIndex)
             self.obj_form.dte_fec_capitalizacion.setDate(fecha)
@@ -203,20 +205,20 @@ class asociado_actualizar(QDialog):
         #pyqtRemoveInputHook()
         #import pdb; pdb.set_trace()
 
-        for row in range(self.obj_form.tw_integracion_cap.rowCount ()):
-            try:
-                id = self.obj_form.tw_integracion_cap.item(row,4).text()
-            except Exception as ex:
-                id =""
+        #for row in range(self.obj_form.tw_integracion_cap.rowCount ()):
+        #    try:
+        #        id = self.obj_form.tw_integracion_cap.item(row,4).text()
+        #    except Exception as ex:
+        #        id =""
 
-            if id =="":
-                obj_E_capital_integracion = E_capital_integracion()
-                obj_E_capital_integracion.id_asoc =self.id_asoc
-                obj_E_capital_integracion.nro_cuota = self.obj_form.tw_integracion_cap.item(row,0).text()
-                obj_E_capital_integracion.fec_cuota = self.obj_form.tw_integracion_cap.item(row,1).text()
-                obj_E_capital_integracion.pesos= self.obj_form.tw_integracion_cap.item(row,2).text()
-                obj_E_capital_integracion.tipo_aporte = self.obj_form.tw_integracion_cap.item(row,3).text()
-                obj_E_capital_integracion.guardar(obj_E_capital_integracion)
+        #    if id =="":
+        #        obj_E_capital_integracion = E_capital_integracion()
+        #        obj_E_capital_integracion.id_asoc =self.id_asoc
+        #        obj_E_capital_integracion.nro_cuota = self.obj_form.tw_integracion_cap.item(row,0).text()
+        #        obj_E_capital_integracion.fec_cuota = self.obj_form.tw_integracion_cap.item(row,1).text()
+         #       obj_E_capital_integracion.pesos= self.obj_form.tw_integracion_cap.item(row,2).text()
+         #       obj_E_capital_integracion.tipo_aporte = self.obj_form.tw_integracion_cap.item(row,3).text()
+         #       obj_E_capital_integracion.guardar(obj_E_capital_integracion)
 
         msgBox = QMessageBox()
         msgBox.setWindowTitle("OK")
@@ -453,7 +455,11 @@ class asociado_actualizar(QDialog):
         msgBox.setText('Se actualizo correctamente el capital de datos personales')
         msgBox.exec_()
 
-
+    def pagar(self):
+        obj_E_capital_integracion = E_capital_integracion()
+        obj_E_capital_integracion.pagar(self.obj_form.lne_nro_cuota.text(),
+                                        self.obj_form.cbx_aporte_tipo.currentText(),
+                                        self.id_asoc)
 #app = QApplication(sys.argv)
 #dialogo= asociado_actualizar()
 #dialogo.show()
