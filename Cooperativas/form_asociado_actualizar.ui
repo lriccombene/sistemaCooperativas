@@ -2129,6 +2129,17 @@ color: rgb(0, 0, 0);</string>
            </property>
           </spacer>
          </item>
+         <item>
+          <widget class="QPushButton" name="btn_pagar">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(140, 189, 58);
+color: rgb(0, 0, 0);</string>
+           </property>
+           <property name="text">
+            <string>Pagar</string>
+           </property>
+          </widget>
+         </item>
         </layout>
        </item>
        <item row="7" column="0">
